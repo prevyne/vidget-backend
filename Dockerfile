@@ -10,7 +10,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the server
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
-```
 
 ### Next Steps
 1.  Save the file.
