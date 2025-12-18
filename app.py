@@ -7,6 +7,13 @@ import uuid
 app = Flask(__name__)
 CORS(app)  # Allow the Lovable app to talk to this server
 
+# --- NEW: Home Route to fix "Not Found" error ---
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return "VidGet Cloud Backend is Online! 🚀 Use POST /download to fetch videos.", 200
+
 
 @app.route('/download', methods=['POST'])
 def download_video():
